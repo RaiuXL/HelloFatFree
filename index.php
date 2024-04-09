@@ -11,7 +11,9 @@ $F3 = Base::instance();
 
 //
 $F3->route('GET /', function() {
-    echo '<h1>Hello Fat Free!</h1>';
+    /*echo '<h1>Hello Fat Free!</h1>';*/
+    $view = new Template();
+    echo $view->render('view/home.html');
 });
 // Run Fatfree
 $F3->run();
